@@ -1,0 +1,133 @@
+.services-section, .portfolio-section {
+    background-color: #111;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    background-image: url('pattern.svg');
+    background-size: contain;
+  /* background-repeat: no-repeat; */
+  background-position: center;
+background-blend-mode:overlay;
+
+
+  z-index: -1;
+  }
+  
+  .services-cards, .portfolio-cards {
+    padding: 40px 24px;
+    
+    display: flex;
+    text-align: center;
+    
+}
+@media (max-width: 768px) {
+
+  .services-cards, .portfolio-cards {
+    padding: 40px 24px;
+    
+    display: block;
+    text-align: center;
+    
+}
+}
+  
+/*   
+  .card, .portfolio-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    padding: 20px;
+    border-right: 1px solid blanchedalmond;
+    width: 30%;
+    text-align: left;
+  }
+  
+  img {
+  
+   position: relative;
+   top:5px;
+   
+    
+  } */
+  
+  .view-project {
+    display: inline-block;
+    margin-top: 10px;
+    color: #f1c40f;
+    text-decoration: none;
+  }
+  
+  .view-all {
+    margin-top: 20px;
+    background-color: #f1c40f;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .headers{
+    font-family: "Public Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    background: linear-gradient(90deg, rgb(247, 238, 127) -0.43%, rgb(119, 249, 108) 94.02%) text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    max-width: 300px;
+    margin: 0 auto;
+  }s
+
+  .icons{
+    margin:auto;
+    display: inline;
+
+  }
+  
+  .icon img {
+    width: 80px; /* Adjust size as needed */
+    margin:auto;
+    float:left;
+    position: relative;
+    left:80px;
+   
+  }
+  
+  .headers {
+    font-size: 1.25rem;
+    margin-top: 80px;
+    clear: both;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .card li {
+    color: #32CD32; /* Green color for list items */
+    margin: 5px 0;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+
+
+  
