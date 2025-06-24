@@ -13,6 +13,7 @@ const repos = await res.json();
 
 for (const repo of repos) {
   await db.collection("My_details").doc(repo.id.toString()).set({
+    category: repo.category || "web develpment",
     name: repo.name,
     description: repo.description,
     githubUrl: repo.html_url,
