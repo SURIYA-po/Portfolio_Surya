@@ -50,7 +50,7 @@ function HeaderComponent() {
   return (
     <div className={`Nav_bar ${show ? 'visible' : 'hidden'}`}>
       <div className='nav-item'>
-        <a href="#"><img src="logo.png" alt="logo" /></a>
+        <a href="#"></a>
       </div>
 
       <div className={`sidebar ${sidebarVisible ? 'visible' : ''}`} ref={sidebarRef} >

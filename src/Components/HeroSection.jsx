@@ -6,7 +6,7 @@ const HeroSection = () => {
     <div className="hero-section">
       <div className="content-wrapper">
         <h2>I'm Surya</h2>
-        <h1><span>Word</span><span className='span2'>Press </span>&amp;</h1> <br></br><h1><span>Front</span>End Developer</h1>
+        <h1><span>Front</span><span className='span2'>End</span>&amp;</h1> <br></br><h1><span>Back</span>End Developer</h1>
         <p>
           With expertise in multiple programming languages and a passion for elegant design, I specialize in
           building sleek, user-centric solutions that address complex digital challenges. My approach combines

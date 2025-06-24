@@ -4,7 +4,8 @@ import { useState } from 'react'
 import './App.css'
 import HeaderComponent from './Components/HeaderComponent'
 import HeroSection from './Components/HeroSection'
-import { ServicesSection,PortfolioSection } from './Components/ServicessSection'
+import { PortfolioSection } from './Components/ServicessSection'
+import Footer from './Components/Footer'
 function App() {
   
 
@@ -12,9 +13,11 @@ function App() {
     <>
      <HeaderComponent/>
 <HeroSection/>
-<ServicesSection/>
+
+
 <PortfolioSection/>
-    
+
+    <Footer/>
     </>
   )
 }
