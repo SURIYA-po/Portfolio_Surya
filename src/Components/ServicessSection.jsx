@@ -76,7 +76,7 @@ const PortfolioSection = () => {
                         <ul>
                             <li>PHP</li>
                             <li>JavaScript</li>
-                            <li>HTML & CSS</li>
+                            <li>HTML &  CSS</li>
                         </ul>
                     </div>
 
