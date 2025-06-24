@@ -11,7 +11,7 @@ const PortfolioSection = () => {
 
     useEffect(() => {
         const fetchProjects = async () => {
-            const snapshot = await getDocs(collection(db, 'projects'));
+            const snapshot = await getDocs(collection(db, 'My_details'));
             const items = snapshot.docs.map(doc => doc.data());
             setPortfolioItems(items);
         };

@@ -12,7 +12,7 @@ const res = await fetch("https://api.github.com/users/SURIYA-po/repos");
 const repos = await res.json();
 
 for (const repo of repos) {
-  await db.collection("projects").doc(repo.id.toString()).set({
+  await db.collection("My_details").doc(repo.id.toString()).set({
     name: repo.name,
     description: repo.description,
     githubUrl: repo.html_url,

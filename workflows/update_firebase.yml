@@ -1,4 +1,4 @@
-name: Update Firebase Projects
+name: Update Firebase Project
 
 on:
   schedule:
