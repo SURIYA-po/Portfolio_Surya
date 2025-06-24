@@ -50,9 +50,51 @@ const PortfolioSection = () => {
             <section className="services-section">
                 <h2 className='headers'>[Services]</h2>
                 <h3>Crafting Solutions through Code, <br />One Project at a Time</h3>
+
                 <div className="services-cards">
-                    {/* Services Cards (static) */}
+
+                    <div className="card">
+                        <div className="icon">
+                            <img src="src/assets/Homepage_Services_1 (1).png" alt="The girl at the laptop" />
+                        </div>
+                        <h4 className="headers">What I can do for you</h4>
+                        <p>Faster, better products that your users love. Here are the services I provide:</p>
+                        <ul>
+                            <li>WordPress Development</li>
+                            <li>React Development</li>
+                            <li>Maintenance & Support</li>
+                            <li>UI/UX Design</li>
+                        </ul>
+                    </div>
+
+                    <div className="card">
+                        <div className="icon">
+                            <img src="src/assets/Homepage_Services_2.avif" alt="The girl at the laptop" />
+                        </div>
+                        <h4 className="headers">Languages I'm fluent in</h4>
+                        <p>Every developer requires the right tool for the problem. I'm proficient in:</p>
+                        <ul>
+                            <li>PHP</li>
+                            <li>JavaScript</li>
+                            <li>HTML & CSS</li>
+                        </ul>
+                    </div>
+
+                    <div className="card">
+                        <div className="icon">
+                            <img src="src/assets/Homepage_Services_3.avif" alt="The girl at the laptop" />
+                        </div>
+                        <h4 className="headers">What you can expect</h4>
+                        <p>I develop solutions that go beyond aesthetics. Here’s what you can expect:</p>
+                        <ul>
+                            <li>Robust and Functional</li>
+                            <li>Optimized for Devices and User-Centric</li>
+                            <li>Efficient and Easily Maintainable</li>
+                        </ul>
+                    </div>
+
                 </div>
+
             </section>
 
             <section className="portfolio-section">
