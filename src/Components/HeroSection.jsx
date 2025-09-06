@@ -18,7 +18,7 @@ const HeroSection = () => {
      
       <div className="footer-icons">
         <a href=""><img src="/assets/linkedin.svg" alt="Upwork" /> </a>
-        <a href="">        <img src="/assets/patter_2.pngupwork.svg" alt="LinkedIn" />
+        <a href="">        <img src="/assets/upwork.svg" alt="LinkedIn" />
         </a>
        <a href=""> <img src="/assets/github.svg" alt="GitHub" /></a>
       </div>
