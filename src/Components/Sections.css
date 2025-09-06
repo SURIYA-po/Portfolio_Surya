@@ -1,11 +1,3 @@
-.servicepair{
- 
-
-   /* Ensure it has height */
-
-}
-
-
 .services-section, .portfolio-section {
     background-color: #111;
     color: #fff;
@@ -128,20 +120,15 @@ background-blend-mode:overlay;
   }
 
 .portfolio-cards{
-  display: flex;
-  
-  justify-content: center;
-   text-align: center;
-   flex-wrap: wrap;
-   
+ display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
     padding: 20px;
-    gap:20px;
-   
-    
+    gap: 20px;
     color: #fff;
-
- 
-    
+    max-width: 1200px; /* Container max width */
+    margin: 0 auto; /* Center the container */
 
 }
 
@@ -202,7 +189,7 @@ background-blend-mode:overlay;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
+  
     max-height: 4.5em;
     line-height: 1.5em;
     margin: 0px;
@@ -345,4 +332,279 @@ h3{
   text-wrap: wrap;
 }
 
-  
+  /* Portfolio Filters */
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #333;
+    background: transparent;
+    color: #333;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #333;
+    color: white;
+}
+
+/* Loading State */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced Portfolio Cards */
+.portfolio-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.view-details {
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Technologies */
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-tag {
+    background: #f0f0f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+    color: #666;
+}
+
+.modal-header {
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.modal-category {
+    background: #333;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.modal-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-section {
+    margin: 1.5rem 0;
+}
+
+.modal-section h4 {
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+.modal-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.modal-link {
+    padding: 0.75rem 1.5rem;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.modal-link:hover {
+    background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-filters {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .modal-content {
+        margin: 1rem;
+        max-width: calc(100vw - 2rem);
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    .modal-links {
+        flex-direction: column;
+    }
+}
+
+
+.portfolio-card {
+    flex: 0 0 calc(33.333% - 14px); /* 3 cards per row minus gap */
+    max-width: calc(33.333% - 14px);
+    min-width: 250px; /* Minimum card width */
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .portfolio-card {
+        flex: 0 0 calc(50% - 10px); /* 2 cards per row on tablets */
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-card {
+        flex: 0 0 100%; /* 1 card per row on mobile */
+        max-width: 100%;
+    }
+}
