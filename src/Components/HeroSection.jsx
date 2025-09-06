@@ -12,15 +12,15 @@ const HeroSection = () => {
           building sleek, user-centric solutions that address complex digital challenges. My approach combines
           technical precision with creative innovation to deliver outstanding results.
         </p>
-        <button className="cta-button">  <a href="">        <img src="src\assets\upwork.svg" alt="LinkedIn" />
+        <button className="cta-button">  <a href="">        <img src="/assets/upwork.svg" alt="LinkedIn" />
         </a>Contact me on upwork </button>
      
      
       <div className="footer-icons">
-        <a href=""><img src="src\assets\linkedin.svg" alt="Upwork" /> </a>
-        <a href="">        <img src="src\assets\upwork.svg" alt="LinkedIn" />
+        <a href=""><img src="/assets/linkedin.svg" alt="Upwork" /> </a>
+        <a href="">        <img src="/assets/patter_2.pngupwork.svg" alt="LinkedIn" />
         </a>
-       <a href=""> <img src="src\assets\github.svg" alt="GitHub" /></a>
+       <a href=""> <img src="/assets/github.svg" alt="GitHub" /></a>
       </div>
 
       </div>

@@ -104,7 +104,7 @@ const PortfolioSection = () => {
                 <div className="services-cards">
                     <div className="card">
                         <div className="icon">
-                            <img src="src/assets/Homepage_Services_1 (1).png" alt="The girl at the laptop" />
+                            <img src="/assets/Homepage_Services_1 (1).png" alt="The girl at the laptop" />
                         </div>
                         <h4 className="headers">What I can do for you</h4>
                         <p>Faster, better products that your users love. Here are the services I provide:</p>
@@ -118,7 +118,7 @@ const PortfolioSection = () => {
 
                     <div className="card">
                         <div className="icon">
-                            <img src="src/assets/Homepage_Services_2.avif" alt="The girl at the laptop" />
+                            <img src="/assets/Homepage_Services_2.avif" alt="The girl at the laptop" />
                         </div>
                         <h4 className="headers">Languages I'm fluent in</h4>
                         <p>Every developer requires the right tool for the problem. I'm proficient in:</p>
@@ -131,7 +131,7 @@ const PortfolioSection = () => {
 
                     <div className="card">
                         <div className="icon">
-                            <img src="src/assets/Homepage_Services_3.avif" alt="The girl at the laptop" />
+                            <img src="/assets/Homepage_Services_3.avif" alt="The girl at the laptop" />
                         </div>
                         <h4 className="headers">What you can expect</h4>
                         <p>I develop solutions that go beyond aesthetics. Here's what you can expect:</p>

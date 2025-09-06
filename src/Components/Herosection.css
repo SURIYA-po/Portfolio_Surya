@@ -33,7 +33,7 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    background-image: url('C:\Users\ACER\Desktop\Portfolio\Portfolio\src\assets\patter _2.png');
+    background-image: url('/assets/patter _2.png');
     
     background-repeat: repeat;
     background-size: cover;
@@ -45,7 +45,7 @@
     width: 300px;
     background-color: #bef842;
     border-radius: 50%;
-    background-image: url('C:\Users\ACER\Desktop\Portfolio\Portfolio\src\assets\myphoto.png');
+    background-image: url('/assets/myphoto.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -17,10 +17,10 @@ const Footer = () => {
                     <a href="#contact">Contact</a>
                 </div>
                 <div className="footer_icon">
-                    <a href=""><img src="src\assets\linkedin.svg" alt="Upwork" /> </a>
-                    <a href="">        <img src="src\assets\upwork.svg" alt="LinkedIn" />
+                    <a href=""><img src="/assets/linkedin.svg" alt="Upwork" /> </a>
+                    <a href="">        <img src="/assets/upwork.svg" alt="LinkedIn" />
                     </a>
-                    <a href=""> <img src="src\assets\github.svg" alt="GitHub" /></a>
+                    <a href=""> <img src="/assets/github.svg" alt="GitHub" /></a>
                 </div>
 
                 <p className="footer-credits">
