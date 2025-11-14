@@ -34,7 +34,7 @@ const PortfolioItems = () => {
 
   if (loading) {
     return (
-      <div className="portfolio-items-container">
+      <div  className="portfolio-items-container " >
         <div className="loading-state">
           <div className="spinner"></div>
           <p>Loading projects...</p>

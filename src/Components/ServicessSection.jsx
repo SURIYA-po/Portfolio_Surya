@@ -94,8 +94,9 @@ const PortfolioSection = () => {
         setVisibleProjects(5); // Reset to show 6 projects when changing category
     };
 
-    return (
-        <div className="servicepair">
+    return ( 
+        <section id="services">
+        <div  is="services" className="servicepair">
             {/* Services Section */}
             <section className="services-section">
                 <h2 className='headers'>[Services]</h2>
@@ -145,7 +146,7 @@ const PortfolioSection = () => {
             </section>
 
             {/* Portfolio Section */}
-            <section className="portfolio-section">
+            <section  id="portfolio" className="portfolio-section">
                 <center><h2 className='headers'>[Portfolio]</h2></center>
                 <h3>I bring results. My clients are proof.</h3>
 
@@ -323,7 +324,9 @@ const PortfolioSection = () => {
                 )}
             </section>
         </div>
+         </section>
     );
+   
 };
 
 export { PortfolioSection };

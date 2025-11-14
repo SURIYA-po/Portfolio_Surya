@@ -6,10 +6,11 @@ import HeroSection from './Components/HeroSection'
 import { PortfolioSection } from './Components/ServicessSection'
 import PortfolioItems from './Components/PortfolioItems'
 import Footer from './Components/Footer'
-
+import ScrollToHash from './ScroolToHash'
 function App() {
   return (
     <Router>
+      <ScrollToHash />
       <Routes>
         {/* Main Home Page Route */}
         <Route path="/" element={
