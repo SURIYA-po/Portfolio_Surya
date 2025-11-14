@@ -60,9 +60,19 @@ function HeaderComponent() {
           </li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li>
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      alert("Blog section is ongoing!");
+    }}
+  >
+    Blog
+  </a>
+</li>
           <li><a href="#about">About me</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li> <a href="https://wa.me/9779800000000" target="_blank" rel="noopener noreferrer">Contact</a></li>
         </ul>
       </div>
 
@@ -70,15 +80,25 @@ function HeaderComponent() {
         <ul ref={navLinksRef}>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li>
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      alert("Blog section is ongoing!");
+    }}
+  >
+    Blog
+  </a>
+</li>
           <li><a href="#about">About me</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://wa.me/9779826110703" target="_blank" rel="noopener noreferrer">Contact</a></li>
         </ul>
       </div>
 
       <div className="inquiry-button">
       <SearchButton className="pair" onMessage={handleMessage}/>
-        <button className='question'>Any Questions?</button>
+        <button className='question' onClick={(e)=>{e.preventDefault(); alert("Plz Click Contact");}}> Any Questions?</button>
       </div>
       <button className="sidebar-toggle" onClick={toggleSidebar}>
         ☰
