@@ -1,9 +1,9 @@
 ﻿![Profile Views](https://komarev.com/ghpvc/?username=SURIYA-po&color=blue)
   
 
-<h1 align="center">Hi there <h1 align="center">
+<h1 align="center">
   Hi there <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" alt="wave">
- and Namaste🙏, I'am Surya Pokhrel 🤯🤓</h1
+ ... Greetings🙏 ... I'am Surya Pokhrel 🤯🤓</h1
 <pre>
 
 </pre>
@@ -60,24 +60,24 @@
 ### 🪄 Featured Projects
 
 - 🧠 [**Sajilo-Hajiri**](https://github.com/SURIYA-po/Sajilo-Hajiri) 📝 An efficient attendance management system using **Face Recognition** built with Django.
-- 🐍 [**CureCircle**](https://github.com/hemrajpant69/CureCircle) 📝 A donation campaign web app to support people needing financial help for fatal disease treatment.
 - 🛒 [**RojgarStation**](https://github.com/SURIYA-po/Rojgarstation) 📝 A web platform for hunting job .
 - 🦾 [**RentalHome**](https://github.com/SURIYA-po/Project_first_rental_home) 📝 An online rental service platform.
-- 🗃️ [**ShajGunasho**](https://github.com/SURIYA-po/SahajGunaso) 📝 Share your Gunsho to your local representatives
+- 🗃️ [**ShajGunasho**](https://github.com/SURIYA-po/SahajGunaso) 📝 Share your Gunsho to your local representatives.
+ - 🐍 [**CureCircle**](https://github.com/hemrajpant69/CureCircle) 📝 A donation campaign web app to support people needing financial help for fatal disease treatment.
+
 
 
 ---
 
 ### 📊 GitHub Stats
 
-![SURIYA-po's GitHub stats](https://git-hub-stats-card-generator.vercel.app/api/svg?username=SURIYA-po&theme=tokyonight&chart=pie)
 ![SURIYA-po's Contribution stats](https://git-hub-stats-card-generator.vercel.app/api/svg?username=SURIYA-po&type=contributions&theme=tokyonight)
 
 ---
 
 ### 🏆 GitHub Contributions
 
-<a href="https://nabinprasaddhungana.com.np">
+<a href="https://suriiya.vercel.app">
   <p align="center">
     <img src="https://raw.githubusercontent.com/suriya-po/suriya-po/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
   </p>
@@ -90,7 +90,7 @@
 I'm always open to collaborating on interesting projects, contributing to open source, or just having a chat about tech, creativity, or educational content.
 
 🤝 **Reach me below:**  
-📧[prnabin123@gmail.com](mailto:pokhrelsurya703@gmail.com)  
+📧[pokhrelsurya703@gmail.com](mailto:pokhrelsurya703@gmail.com)  
 🌐[My Portfolio](https://suriiya.vercel.app)  
 🔗[LinkedIn](https://linkedin.com/in/pokhrelsurya-z)
 
@@ -99,6 +99,7 @@ I'm always open to collaborating on interesting projects, contributing to open s
 <p align="center">
   🙏 Let's build something amazing together! Thank you!
 </p>
+
 
 
 
