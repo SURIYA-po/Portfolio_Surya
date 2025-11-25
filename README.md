@@ -1,7 +1,12 @@
 ﻿![Profile Views](https://komarev.com/ghpvc/?username=SURIYA-po&color=blue)
   
 
-<h1 align="center">Hi there and Namaste, Surya Pokhrel 🤯🤓</h1>
+<h1 align="center">Hi there <h1 align="center">
+  Hi there <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" alt="wave">
+ and Namaste🙏, I'am Surya Pokhrel 🤯🤓</h1
+<pre>
+
+</pre>
 
 <p align="center">
 <img src="https://readme-typing-svg.herokuapp.com/?lines=💻+Full-Stack+Developer;🤖+AI+%26+ML+Explorer;🌱+Open+Source+Contributor;Sytax+Is+My+Soulmate&center=true&width=600&height=60&size=24&font=Fira+Code&color=2E8BFF" alt="Typing SVG"/>
@@ -30,18 +35,18 @@
 ### 🏆 Tech Stack
 
 **Languages:**  
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3)
 
 **Frameworks & Tools:**  
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react)
-![SpringBoot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![SpringBoot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css)
@@ -94,5 +99,6 @@ I'm always open to collaborating on interesting projects, contributing to open s
 <p align="center">
   🙏 Let's build something amazing together! Thank you!
 </p>
+
 
 
