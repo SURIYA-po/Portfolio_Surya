@@ -68,7 +68,7 @@
 ---
 
 ### 🏆 GitHub Contributions
-![GitHub Snake Light](https://raw.githubusercontent.com/SURIYA-po/SURIYA-po/output/dist/snake.svg)
+![GitHub Snake Light](https://github.com/SURIYA-po/SURIYA-po/blob/main/artifacts/github-contribution-grid-snake.svg)
 ![GitHub Snake Dark](https://raw.githubusercontent.com/SURIYA-po/SURIYA-po/output/dist/snake-dark.svg)
 
 ### 💬 Let's Connect!
@@ -85,4 +85,5 @@ I'm always open to collaborating on interesting projects, contributing to open s
 <p align="center">
   🙏 Let's build something amazing together! Thank you!
 </p>
+
 
