@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: "0 0 * * *"  # Runs every day at midnight
   workflow_dispatch:      # Allow manual trigger
-  push:
-    branches:
-      - main
 
 jobs:
   build:
@@ -17,16 +14,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate Snake SVG
+      # Generate light version
+      - name: Generate Light Snake SVG
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: artifacts/github-contribution-grid-snake.svg
+          outputs: artifacts/github-contribution-grid-snake-light.svg
 
-      - name: Push snake file to repo
+      # Generate dark version
+      - name: Generate Dark Snake SVG
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: artifacts/github-contribution-grid-snake-dark.svg
+          palette: github-dark
+
+      # Commit both SVGs to the repo
+      - name: Push snake files to repo
         uses: EndBug/add-and-commit@v9
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           author_name: GitHub Actions
           author_email: actions@github.com
-          message: "Generated Snake Animation"
-          add: "artifacts/github-contribution-grid-snake.svg"
+          message: "Generated Snake Animation (Light + Dark)"
+          add: |
+            artifacts/github-contribution-grid-snake-light.svg
+            artifacts/github-contribution-grid-snake-dark.svg
