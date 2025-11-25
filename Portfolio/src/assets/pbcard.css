@@ -1,0 +1,151 @@
+/* PbCard.css */
+
+/* --- Card Container --- */
+
+.pb-card {
+  /* Using a dark background color similar to the image */
+  /* background-color: #1a1a1a;  */
+  color: #f0f0f0; 
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+  display: grid;
+  /* Define two columns: content takes 3/4, image takes 1/4 */
+  grid-template-columns: 3fr 1fr; 
+  gap: 2rem;
+  align-items: center; /* Vertically align items */
+  border-bottom: 0.5px solid rgb(177, 177, 177);
+  
+}
+
+/* Ensure the card stacks vertically on smaller screens */
+@media (max-width: 768px) {
+  .pb-card {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+
+/* --- Content Area --- */
+
+.pb-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Blog Date Style */
+.pb-card__date {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  margin-bottom: 0.5rem;
+  /* Use the tag styles for date if you want the pill shape */
+}
+
+/* Main Title/Subtitle */
+.pb-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.pb-card__subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  font-style: normal;
+  color: #00ffaa; /* Accent color for the title */
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.pb-card__description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgb(167, 169, 190);
+  margin-bottom: 1.5rem;
+  text-align: left;
+  margin: 0px
+}
+
+
+/* --- Portfolio Link (View Project) --- */
+
+.project-link {
+  color: var(--accent); text-decoration: none; font-weight: 500;
+  transition: color 0.3s;
+}
+.project-link:hover { color: #fff; }
+
+/* --- Tags --- */
+
+.pb-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem; /* For blog tags that appear at the bottom */
+}
+
+/* Style for individual tag pills */
+.pb-card__tag {
+  background-color: #333333;
+  color: #cccccc;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Adjust tag margin for portfolio cards to sit below content */
+.pb-card--portfolio .pb-card__tags--main {
+    margin-top: 0.5rem;
+}
+
+/* Hide blog tags on desktop and ensure they appear below the grid on mobile */
+.pb-card__tags--blog {
+    display: none; 
+    grid-column: 1 / -1; /* Span the entire width on mobile */
+}
+
+@media (max-width: 768px) {
+    /* Show blog tags at the bottom on mobile */
+    .pb-card__tags--blog {
+        display: flex;
+        margin-top: 1rem;
+        border-top: 1px solid #333;
+        padding-top: 1rem;
+    }
+}
+
+
+/* --- Image Section --- */
+
+.pb-card__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pb-card__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  /* Optional: Make the image square or circular like some of your examples */
+  /* width: 100px; 
+  height: 100px; 
+  object-fit: cover; */
+}
+
+@media (max-width: 768px) {
+  .pb-card__image-container {
+    /* Move image above content on mobile */
+    order: -1; 
+    margin-bottom: 1rem;
+  }
+  .pb-card__image {
+    max-width: 50%; /* Reduce image size on smaller screens */
+  }
+}

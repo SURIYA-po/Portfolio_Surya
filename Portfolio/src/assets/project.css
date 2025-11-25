@@ -1,0 +1,81 @@
+/* src/components/Projects.css */
+
+.projects-page-container {
+  max-width: 1250px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 2rem;
+  color: #f0f0f0; /* Light text for dark background */
+  background-color: #0d0d0d; /* Very dark background */
+  min-height: 100vh;
+  padding-top: 80px; 
+  padding-left: 2rem; /* Keep existing padding if needed */
+  padding-right: 2rem; /* Keep existing padding if needed */
+  padding-bottom: 2rem;
+}
+
+.projects-main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ffaa; /* Accent color for the title */
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.projects-content-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* Left column wider for cards, right for sidebar */
+  gap: 3rem; /* Space between columns */
+  border-top:0.5px solid rgb(177, 177, 177)
+}
+
+/* On smaller screens, stack columns */
+@media (max-width: 992px) {
+  .projects-content-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 2rem;
+  }
+}
+
+
+.projects-sidebar {
+   grid-column: 2/3;; 
+  padding: 1rem;
+  /* Optional: a subtle background or border for the sidebar if desired */
+  /* background-color: #1a1a1a; */ 
+  /* border-left: 1px solid #333; */
+}
+
+.projects-intro-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cccccc;
+  margin:0px;
+  margin-bottom: 2rem;
+}
+
+.projects-skills-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.projects-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Space between skill tags */
+}
+
+.projects-skill-tag {
+  background-color: #333333;
+  color: #cccccc;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap; /* Prevent tags from breaking */
+}
+
+/* Ensure PbCard also uses the dark background from the page for consistency */
+/* This specific selector ensures the PbCard's background fits the page */

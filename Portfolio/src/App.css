@@ -1,0 +1,13 @@
+body {
+    /* 1. Remove default browser margin */
+    margin: 0; 
+    
+    /* 2. Remove default browser padding (less common, but good to include) */
+    padding: 0; 
+    
+    /* 3. Ensure the background color covers the entire viewport */
+    background-color: #0d0d0d; 
+    
+    /* Optional: Hide scrollbar overflow that might be caused by setting width/height to 100% */
+    overflow-x: hidden;
+}
