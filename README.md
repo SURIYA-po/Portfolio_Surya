@@ -4,13 +4,15 @@
 <h1 align="center">Hi there and Namaste, Surya Pokhrel 🤯🤓</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=Passionate+Fullstack+Developer;Lifelon..." />
+<img src="https://readme-typing-svg.herokuapp.com/?lines=💻+Full-Stack+Developer;🤖+AI+%26+ML+Explorer;🌱+Open+Source+Contributor;Sytax+Is+My+Soulmate&center=true&width=600&height=60&size=24&font=Fira+Code&color=2E8BFF" alt="Typing SVG"/>
 </p>
 
 <p align="center">
   <a href="https://github.com/SURIYA-po"><img src="https://img.shields.io/github/followers/SURIYA-po?label=Follow&style=social"></a>
   <a href="mailto:pokhrelsurya703@gmail.com"><img src="https://img.shields.io/badge/email-pokhrelsurya703%40gmail.com-red?style=flat-square&logo=gmail"></a>
-  <a href="https://www.linkedin.com/in/pokhrelsurya-z/"><img src="https://img.shields.io/badge/LinkedIn-surya-pokhrel-blue?style=flat-square&logo=linkedin"></a>
+<a href="https://www.linkedin.com/in/pokhrelsurya-z/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-Surya%20Pokhrel-blue?style=flat-square&logo=linkedin" alt="LinkedIn - Surya Pokhrel"/>
+</a>
   <!-- https://komarev.com/ghpvc/?username=NabinPrasadDhungana -->
 </p>
 
@@ -19,7 +21,7 @@
 ### About Me
 
 🤩 I'm a passionate and curious **developer** from Nepal.  
-🤖 I specialize in building full-stack(primarily Back-End for now i.e. July, 2025) web apps using modern technologies.  
+🤖 I specialize in building full-stack web apps using modern technologies.  
 🧠 I love turning ideas into beautiful, interactive experiences.  
 📚 Always learning, always building.
 
@@ -38,11 +40,11 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3)
 
 **Frameworks & Tools:**  
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react)
+![SpringBoot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django)
-![SpringBoot](https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css)
-![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs)
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=flat&logo=mysql)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git)
@@ -63,13 +65,20 @@
 
 ### 📊 GitHub Stats
 
-![SURIYA-po's Language stats](https://git-hub-stats-card-generator.vercel.app/api/svg?username=SURIYA-po&type=languages&theme=monochrome&chart=pie)
+![SURIYA-po's GitHub stats](https://git-hub-stats-card-generator.vercel.app/api/svg?username=SURIYA-po&theme=tokyonight&chart=pie)
+![SURIYA-po's Contribution stats](https://git-hub-stats-card-generator.vercel.app/api/svg?username=SURIYA-po&type=contributions&theme=tokyonight)
 
 ---
 
 ### 🏆 GitHub Contributions
-![GitHub Snake Light](https://github.com/SURIYA-po/SURIYA-po/blob/main/artifacts/github-contribution-grid-snake.svg)
-![GitHub Snake Dark](https://raw.githubusercontent.com/SURIYA-po/SURIYA-po/output/dist/snake-dark.svg)
+
+<a href="https://nabinprasaddhungana.com.np">
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/suriya-po/suriya-po/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+  </p>
+</a>
+
+
 
 ### 💬 Let's Connect!
 
