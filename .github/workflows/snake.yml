@@ -27,7 +27,7 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: artifacts/github-contribution-grid-snake-dark.svg
-          palette: github-dark
+          palette: "#ff4b1f,#ff9068,#f9d423,#6dd5ed,#2193b0"
 
       # Commit both SVGs to the repo
       - name: Push snake files to repo
