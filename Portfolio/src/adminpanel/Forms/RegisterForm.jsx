@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/RegisterForm.css";
 
-import "../services/userService"
+import userService from "../services/userService";
 
 
 export default function RegisterForm() {
@@ -12,6 +12,7 @@ export default function RegisterForm() {
     role: "user",
     avatar: "",
   });
+  
  
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -21,14 +22,19 @@ export default function RegisterForm() {
   e.preventDefault();
 
   const data = new FormData();
+
   data.append("name", form.name);
   data.append("email", form.email);
   data.append("password", form.password);
   data.append("role", form.role);
-  data.append("avatar", form.avatar);
+
+  if (form.avatar) {
+    data.append("avatar", form.avatar);
+  }
 
   
-    registerUser(data)
+
+    userService.create(data)
     .then((response) => {
       console.log("User registered successfully:", response);
     })

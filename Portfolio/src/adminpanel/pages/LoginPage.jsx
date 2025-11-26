@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -83,7 +84,7 @@ export default function LoginPage() {
             <p className="text-gray-400 text-center text-sm mt-4">
               Don't have an account?{" "}
               <span className="text-blue-400 cursor-pointer hover:underline">
-                Register
+                <Link to="/register">Register</Link>
               </span>
             </p>
 
