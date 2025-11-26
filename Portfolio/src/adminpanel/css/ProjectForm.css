@@ -1,0 +1,121 @@
+.project-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+  z-index: 999;
+}
+
+.project-card {
+  width: 480px;
+  padding: 35px 40px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(15px);
+  color: white;
+  animation: slideUp 0.6s ease;
+}
+
+.project-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Input */
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.input-group textarea {
+  resize: vertical;
+}
+
+/* Tech Stack */
+.tech-row {
+  display: flex;
+  gap: 8px;
+}
+
+.tech-add-btn {
+  padding: 0 12px;
+  border: none;
+  background: #0984e3;
+  color: white;
+  font-size: 22px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tech-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.project-btn {
+  width: 100%;
+  padding: 12px;
+  background: #00cec9;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.project-btn:hover {
+  background: #00b5b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
