@@ -1,7 +1,21 @@
 const Project = require("../models/Project");
 
 exports.createProject = async (req, res) => {
-  const data = { ...req.body, owner: req.user._id };
+  const { title, description, techStack, repoUrl, liveUrl, isPublic } = req.body;
+ let projectImage = null;
+    if (req.file) {
+      projectImage = `${req.protocol}://${req.get("host")}/uploads/projectpics/${req.file.filename}`;
+    }
+  const data = {
+    owner: req.user._id,
+    title,
+    description,
+    techStack,
+    repoUrl,
+    liveUrl,
+    isPublic,
+    image: projectImage
+  };
   const project = await Project.create(data);
   res.status(201).json(project);
 };

@@ -54,7 +54,7 @@
 }
 
 /* Textarea */
-textarea {
+.textareas {
     position: absolute;
     top: calc(100% + 5px );
  /* Directly below pair div */
@@ -70,6 +70,6 @@ textarea {
 }
 
 /* Show textarea when search is visible */
-.pair .search.visible ~ textarea {
+.pair .search.visible ~ .textareas {
     top: calc(100% + 10px); /* Adjust position */
 }

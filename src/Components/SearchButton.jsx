@@ -51,7 +51,7 @@ function SearchButton( {onMessage}) {
           </div>
 <br /><br />
           {searchVisibles && (
-        <div className='textarea'>
+        <div className='textareas'>
           {/* Text area to display searched items */}
           <textarea
             name="searchResults"

@@ -9,6 +9,11 @@ import Footer from './Components/Footer'
 import ScrollToHash from './ScroolToHash'
 import LoginPage from './adminpanel/pages/LoginPage'
 import RegisterForm from './adminpanel/Forms/RegisterForm'
+import ProjectForm from './adminpanel/Forms/ProjectForm'
+import Blog from './Components/Blog'
+import BlogForm from './adminpanel/Forms/BlogPostForm'
+//
+
 function App() {
   return (
     <Router>
@@ -34,6 +39,17 @@ function App() {
         } />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterForm />} />
+        <Route path="/createproject" element={<ProjectForm />} />
+       <Route path="/blog" element={
+          <>
+           <HeaderComponent/>
+          <Blog />
+           <Footer/>
+          </>
+        } />
+ <Route path="/createblog" element={<BlogForm />} />
+
+        
       </Routes>
     </Router>
   )

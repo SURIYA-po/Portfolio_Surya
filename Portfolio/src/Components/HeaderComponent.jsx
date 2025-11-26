@@ -12,7 +12,7 @@ function HeaderComponent() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
 
-  const sidebarRef= useRef(null);
+  const sidebarRef = useRef(null);
 
   const navLinksRef = useRef(null);
 
@@ -25,25 +25,25 @@ function HeaderComponent() {
     }
     setLastScrollY(currentScrollY);
   };
-  
-  
-  
-  
+
+
+
+
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-   
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-     
+
   }, [lastScrollY]);
 
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
   };
 
-  const handleMessage= (msg)=>{
+  const handleMessage = (msg) => {
     console.log(msg);
     setSearchVisible(msg);
   }
@@ -57,21 +57,11 @@ function HeaderComponent() {
       <div className={`sidebar ${sidebarVisible ? 'visible' : ''}`} ref={sidebarRef} >
         <ul>
           <li>
-         <SearchButton onMessage={handleMessage}/>
+            <SearchButton onMessage={handleMessage} />
           </li>
           <li><a href="#services">Services</a></li>
           <li><Link to="/portfolio">Portfolio</Link></li>
-          <li>
-  <a
-    href="#"
-    onClick={(e) => {
-      e.preventDefault();
-      alert("Blog section is ongoing!");
-    }}
-  >
-    Blog
-  </a>
-</li>
+                    <li><Link to="/blog">Blog</Link></li>
           <li><a href="#about">About me</a></li>
           <li> <a href="https://wa.me/9779800000000" target="_blank" rel="noopener noreferrer">Contact</a></li>
         </ul>
@@ -81,25 +71,16 @@ function HeaderComponent() {
         <ul ref={navLinksRef}>
           <li><a href="#services">Services</a></li>
           <li><Link to="/portfolio">Portfolio</Link></li>
-          <li>
-  <a
-    href="#"
-    onClick={(e) => {
-      e.preventDefault();
-      alert("Blog section is ongoing!");
-    }}
-  >
-    Blog
-  </a>
-</li>
+                              <li><Link to="/blog">Blog</Link></li>
+
           <li><a href="#about">About me</a></li>
           <li><a href="https://wa.me/9779826110703" target="_blank" rel="noopener noreferrer">Contact</a></li>
         </ul>
       </div>
 
       <div className="inquiry-button">
-      <SearchButton className="pair" onMessage={handleMessage}/>
-        <button className='question' onClick={(e)=>{e.preventDefault(); alert("Plz Click Contact");}}> Any Questions?</button>
+        <SearchButton className="pair" onMessage={handleMessage} />
+        <button className='question' onClick={(e) => { e.preventDefault(); alert("Plz Click Contact"); }}> Any Questions?</button>
       </div>
       <button className="sidebar-toggle" onClick={toggleSidebar}>
         ☰

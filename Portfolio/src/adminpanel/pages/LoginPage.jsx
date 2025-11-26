@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+// import "../css/TailwindOnly.css"
 
 export default function LoginPage() {
+   useEffect(() => {
+    import("../css/TailwindOnly.css");
+  }, []);
+
   const [form, setForm] = useState({ email: "", password: "" });
 
   const handleChange = (e) =>

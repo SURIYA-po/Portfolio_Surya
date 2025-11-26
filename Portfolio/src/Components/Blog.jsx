@@ -6,7 +6,7 @@ import { projectsData, allSkills } from '../assets/projectdata'; // Adjust path 
 import '../assets/project.css';
 import { Link } from 'react-router-dom';
 
-function Projects() {
+function Blog() {
   return (
     <div className="projects-page-container">
       {/* Page Title - You might wrap this in a header later */}
@@ -36,11 +36,11 @@ function Projects() {
               </span>
             ))}
           </div>
-          <Link to="/createproject">Create Project </Link>
+          <Link to="/createblog">Create Blog Post </Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default Projects;
+export default Blog;

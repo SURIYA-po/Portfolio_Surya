@@ -49,7 +49,9 @@
 }
 
 .input-group textarea {
-  resize: vertical;
+  min-height: 120px;       /* FIXES THE ISSUE */
+  height: auto;
+  display: block;
 }
 
 .input-group input::placeholder,

@@ -2,7 +2,7 @@ const BlogPost = require("../models/BlogPost");
 const slugify = require("slugify");
 
 exports.createPost = async (req, res) => {
-  const { title, content, excerpt, tags, coverImage, isPublished } = req.body;
+  const { title, content, excerpt, tags, isPublished } = req.body;
   const slug = slugify(title, { lower: true, strict: true });
 
   // ensure unique slug: append timestamp if needed
@@ -13,10 +13,13 @@ exports.createPost = async (req, res) => {
     i++;
     if (i > 5) break;
   }
-
+let coverImageUrl = null;
+    if (req.file) {
+      coverImageUrl = `${req.protocol}://${req.get("host")}/uploads/blogpics/${req.file.filename}`;
+    }
   const post = await BlogPost.create({
     author: req.user._id,
-    title, slug: uniqueSlug, content, excerpt, tags, coverImage, isPublished
+    title, slug: uniqueSlug, content, excerpt, tags, coverImage: coverImageUrl, isPublished
   });
   res.status(201).json(post);
 };
