@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 // import "../css/ProjectForm.css"; // We are replacing this with Tailwind classes
-
+import projectService from "../services/projectService";
 export default function ModernProjectForm() {
      useEffect(() => {
         // In a real project, you would ensure Tailwind CSS is properly imported/configured
         import("../css/TailwindOnly.css");
       }, []);
-      
+
     // State initialization is kept identical
     const [form, setForm] = useState({
         title: "",
@@ -58,47 +58,47 @@ export default function ModernProjectForm() {
             techStack: form.techStack.filter((t) => t !== tech),
         });
     };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  setError(null);
+  setSuccess(null);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setError(null);
-        setSuccess(null);
+  try {
+    const data = new FormData();
+    data.append("title", form.title);
+    data.append("description", form.description);
+    data.append("repoUrl", form.repoUrl);
+    data.append("liveUrl", form.liveUrl);
+    data.append("isPublic", form.isPublic);
 
-        const data = new FormData();
-        data.append("title", form.title);
-        data.append("description", form.description);
-        data.append("repoUrl", form.repoUrl);
-        data.append("liveUrl", form.liveUrl);
-        data.append("isPublic", form.isPublic);
-        
-        // Append image if present
-        if (form.image) {
-             data.append("image", form.image); 
-        }
+    // Append image if present
+    if (form.image) {
+      data.append("image", form.image);
+    }
 
-        // Append techStack array
-        form.techStack.forEach((t) => data.append("techStack[]", t));
+    // Append techStack array
+    form.techStack.forEach((t) => data.append("techStack[]", t));
 
-        // Placeholder for API call (e.g., using Axios)
-        // try {
-        //     const response = await axios.post("/api/v1/projects", data, {
-        //         headers: { 'Content-Type': 'multipart/form-data' }
-        //     });
-        //     setSuccess("Project saved successfully!");
-        //     // Optionally reset form
-        // } catch (err) {
-        //     setError("Failed to save project.");
-        // } finally {
-        //     setLoading(false);
-        // }
-        
-        // Simulating submission for demonstration:
-        console.log("Project FormData:", Object.fromEntries(data.entries()));
-        setSuccess(`Project '${form.title}' submitted successfully.`);
-        setLoading(false);
-        
-    };
+    // Make API call
+    const response = await projectService.createProject(data);
+
+    // Log form data for debugging
+    console.log("Project FormData:", Object.fromEntries(data.entries()));
+
+    // Success message
+    setSuccess(`Project '${form.title}' submitted successfully!`);
+
+    // Optionally, reset the form
+    // setForm({ title: "", description: "", repoUrl: "", liveUrl: "", isPublic: true, image: null, techStack: [] });
+
+  } catch (err) {
+    console.error("Error saving project:", err);
+    setError("Failed to save project.");
+  } finally {
+    setLoading(false);
+  }
+};
 
     return (
         // The main container and card styling matches the blog form

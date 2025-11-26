@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 // Assume axios is installed: npm install axios
 import axios from "axios";
+import blogService from "../services/BlogService";
 
 // NOTE: Replace this URL with your actual API endpoint
 const API_URL = "/api/v1/posts";
@@ -66,12 +67,7 @@ export default function ModernBlogPostForm() {
 
     try {
       // 4. Send the request
-      const response = await axios.post(API_URL, formData, {
-        headers: {
-          // No need to set Content-Type for FormData; Axios/Fetch does it automatically with the correct boundary
-          // Authorization: `Bearer ${userToken}`, // Include if authentication is required
-        },
-      });
+      const response = await blogService.createBlog(formData);
 
       setSuccess(`Post created successfully! Title: ${response.data.title}`);
       setForm({ title: "", excerpt: "", content: "", tags: "", isPublished: false }); // Reset form

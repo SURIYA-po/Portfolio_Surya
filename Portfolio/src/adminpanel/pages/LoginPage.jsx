@@ -1,22 +1,47 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect,navigate } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import api from "../../api/api";
 // import "../css/TailwindOnly.css"
+import { useAuth } from "../../context/AuthContext";
 
 export default function LoginPage() {
    useEffect(() => {
     import("../css/TailwindOnly.css");
   }, []);
-
+  const { login } = useAuth()
+  const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(form);
-  };
+  try {
+    const res = await api.post("/api/auth/login", form);
+
+    if (res.status === 200) {
+      const user = res.data.user;
+      const token = res.data.token;
+
+      // Save user + token in auth context or state
+      login(user, token);
+
+     
+
+      // Navigate to home page
+      navigate("/");
+    }
+
+  } catch (error) {
+    console.error("Login error:", error);
+
+    // Optional: show error message
+    // setError("Invalid email or password");
+  }
+};
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-black relative overflow-hidden">

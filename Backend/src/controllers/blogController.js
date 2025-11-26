@@ -1,28 +1,76 @@
 const BlogPost = require("../models/BlogPost");
 const slugify = require("slugify");
-
 exports.createPost = async (req, res) => {
-  const { title, content, excerpt, tags, isPublished } = req.body;
-  const slug = slugify(title, { lower: true, strict: true });
+  try { 
+    console.log("user is ", req.user);
+    const { title, content, excerpt, tags, isPublished } = req.body;
 
-  // ensure unique slug: append timestamp if needed
-  let uniqueSlug = slug;
-  let i = 1;
-  while (await BlogPost.findOne({ slug: uniqueSlug })) {
-    uniqueSlug = `${slug}-${Date.now()}`;
-    i++;
-    if (i > 5) break;
-  }
-let coverImageUrl = null;
-    if (req.file) {
-      coverImageUrl = `${req.protocol}://${req.get("host")}/uploads/blogpics/${req.file.filename}`;
+    // -----------------------------
+    // Basic validation
+    // -------------------------------
+    if (!title || !content) {
+      return res.status(400).json({ message: "Title and content are required." });
     }
-  const post = await BlogPost.create({
-    author: req.user._id,
-    title, slug: uniqueSlug, content, excerpt, tags, coverImage: coverImageUrl, isPublished
-  });
-  res.status(201).json(post);
+
+    // -----------------------------
+    // Generate slug
+    // -----------------------------
+    const slug = slugify(title, { lower: true, strict: true });
+
+    let uniqueSlug = slug;
+    let attempts = 0;
+
+    while (await BlogPost.findOne({ slug: uniqueSlug })) {
+      uniqueSlug = `${slug}-${Date.now()}`;
+      attempts++;
+
+      if (attempts > 5) {
+        return res.status(500).json({
+          message: "Failed to generate a unique slug. Try again.",
+        });
+      }
+    }
+
+    // -----------------------------
+    // Handle image upload
+    // -----------------------------
+    let coverImageUrl = null;
+    if (req.file) {
+      try {
+        coverImageUrl = `${req.protocol}://${req.get("host")}/uploads/blogpics/${req.file.filename}`;
+      } catch (imgError) {
+        return res.status(500).json({
+          message: "Image processing failed.",
+          error: imgError.message,
+        });
+      }
+    }
+
+    // -----------------------------
+    // Create blog post
+    // -----------------------------
+    const post = await BlogPost.create({
+      author: req.user?._id,
+      title,
+      slug: uniqueSlug,
+      content,
+      excerpt,
+      tags,
+      coverImage: coverImageUrl,
+      isPublished: isPublished ?? false,
+    });
+
+    return res.status(201).json(post);
+
+  } catch (error) {
+    console.error("Create Post Error:", error);
+    return res.status(500).json({
+      message: "Server error while creating blog post.",
+      error: error.message,
+    });
+  }
 };
+
 
 exports.getPost = async (req, res) => {
   const post = await BlogPost.findOne({ slug: req.params.slug }).populate("author", "name email");
