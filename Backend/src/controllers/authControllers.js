@@ -1,19 +1,83 @@
 const User = require("../models/User");
-const { signToken } = require("../utils/jwt");
+const { signToken } = require("../middlewares/signToken");
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = process.env.JWT_SECRET ;
+// src/controllers/authController.js
+
 
 exports.register = async (req, res) => {
-  const { name, email, password } = req.body;
-  if (!name || !email || !password) return res.status(400).json({ message: "Missing fields" });
+  try {
+    console.log("File received:", req.file);
 
-  const exists = await User.findOne({ email });
-  if (exists) return res.status(400).json({ message: "Email already in use" });
+    const { name, email, password, role } = req.body;
 
-  const user = new User({ name, email, password });
-  await user.save();
+    // Basic validation
+    if (!name || !email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: "Missing required fields: name, email, or password",
+        received: req.body
+      });
+    }
 
-  const token = signToken(user);
-  res.status(201).json({ user: { id: user._id, name: user.name, email: user.email }, token });
+    // Check if user already exists
+    const exists = await User.findOne({ email });
+    if (exists) {
+      return res.status(400).json({
+        success: false,
+        message: "Email already in use",
+      });
+    }
+
+    // Handle avatar file (if uploaded)
+    let avatarUrl = null;
+    if (req.file) {
+      avatarUrl = `${req.protocol}://${req.get("host")}/uploads/avatars/${req.file.filename}`;
+    }
+
+    // Create user
+    const user = new User({
+      name,
+      email,
+      password,
+      role: role || "user",
+      avatar: avatarUrl,
+    });
+
+    await user.save();
+
+   
+    const token = jwt.sign(
+      { id: user._id, role: user.role },
+      JWT_SECRET,
+      { expiresIn: "1d" }
+    );
+
+    res.status(201).json({
+      success: true,
+      message: "User registered successfully",
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+        avatar: user.avatar,
+      },
+      token,
+    });
+  } catch (error) {
+    console.error("Registration error:", error);
+
+    // Send detailed error in development
+    res.status(500).json({
+      success: false,
+      message: "Server error during registration",
+      error: error.message,
+      stack: process.env.NODE_ENV === "development" ? error.stack : undefined,
+    });
+  }
 };
+
 
 exports.login = async (req, res) => {
   const { email, password } = req.body;
@@ -24,5 +88,5 @@ exports.login = async (req, res) => {
   if (!matched) return res.status(401).json({ message: "Invalid credentials" });
 
   const token = signToken(user);
-  res.json({ user: { id: user._id, name: user.name, email: user.email }, token });
+  res.json({ user: { id: user._id, name: user.name, email: user.email,avatar:user.avatar }, token });
 };
