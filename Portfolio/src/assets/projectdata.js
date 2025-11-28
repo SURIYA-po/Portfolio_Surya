@@ -8,7 +8,7 @@ const projectsData = [
     techStack: ["cPanel", "MySQL", "PHP", "SalesForce", "WHM", "WordPress"],
     repoUrl: "https://github.com/your-repo-php", // Optional, if no liveUrl
     liveUrl: "https://live-php-project.com",
-    image: "https://via.placeholder.com/150/36394e/FFFFFF?text=DOCTORUM", // Placeholder image URL
+    image: "https://via.placehold.co/150/36394e/FFFFFF?text=DOCTORUM", // Placeholder image URL
     isPublic: true,
     owner: "654321098765432109876542", // Example owner ID
     createdAt: "2023-01-15T10:00:00.000Z",

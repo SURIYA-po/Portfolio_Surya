@@ -5,8 +5,24 @@ import PbCard from './PbCard'; // Adjust path as needed
 import { projectsData, allSkills } from '../assets/projectdata'; // Adjust path as needed
 import '../assets/project.css';
 import { Link } from 'react-router-dom';
+import blogService from '../adminpanel/services/BlogService';
+import { useEffect, useState } from 'react';
 
 function Blog() {
+
+  const [blogData, setBlogData] = useState([]);
+   useEffect(() => {
+      async function fetchBlogs() {
+        try {
+          const response = await blogService.getBlogs();
+          setBlogData(response.data);
+        } catch (error) {
+          console.error("Failed to fetch blogs:", error);
+        }
+      }
+  
+      fetchBlogs();
+    }, []);
   return (
     <div className="projects-page-container">
       {/* Page Title - You might wrap this in a header later */}
@@ -15,9 +31,9 @@ function Blog() {
       <div className="projects-content-grid">
         {/* Left Column for Project Cards */}
         <div className="projects-list">
-          {projectsData.map((project) => (
+          {blogData.map((blog) => (
             // Pass the entire project object as the 'data' prop to PbCard
-            <PbCard key={project._id} data={project} />
+            <PbCard key={blog._id} data={blog} />
           ))}
         </div>
 

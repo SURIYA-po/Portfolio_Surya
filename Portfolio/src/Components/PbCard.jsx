@@ -14,7 +14,7 @@ const PbCard = ({ data }) => {
 
   // 1. Determine Card Type and Map Data Fields
   const isPortfolio = !!data.liveUrl || !!data.repoUrl; // Portfolio has live/repo URLs
-
+console.log(data);
   // Use a map object to structure the data for consistency
   const cardData = {};
 

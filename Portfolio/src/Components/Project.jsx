@@ -1,12 +1,28 @@
 // src/components/Projects.jsx
-
+import { useEffect, useState } from 'react';
 import React from 'react';
 import PbCard from './PbCard'; // Adjust path as needed
 import { projectsData, allSkills } from '../assets/projectdata'; // Adjust path as needed
 import '../assets/project.css';
 import { Link } from 'react-router-dom';
+import { use } from 'react';
+import projectService from '../adminpanel/services/projectService';
 
 function Projects() {
+  const [projectsData, setProjectData] = useState([]);
+ useEffect(() => {
+    async function fetchProjects() {
+      try {
+        const response = await projectService.getProjects();
+        setProjectData(response.data);
+      } catch (error) {
+        console.error("Failed to fetch projects:", error);
+      }
+    }
+
+    fetchProjects();
+  }, []);
+//  fetchProjects();
   return (
     <div className="projects-page-container">
       {/* Page Title - You might wrap this in a header later */}

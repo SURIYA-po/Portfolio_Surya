@@ -11,7 +11,7 @@ const projectService = {
 
   // GET ALL PROJECTS
   getProjects: async () => {
-    return await api.get("/api/projects/");
+    return await api.get("/api/projects/public/");
   },
 
   // GET PROJECT BY ID
